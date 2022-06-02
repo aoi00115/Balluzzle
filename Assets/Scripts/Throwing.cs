@@ -11,6 +11,8 @@ public class Throwing : MonoBehaviour
     public Transform Player;
     private GameObject throwableObject;
     public GameObject[] objectsToThrow;
+    public AudioClip throwingSound;
+    AudioSource audioSource;
 
     [Header("Settings")]
     public int ballTotalThrows;
@@ -35,6 +37,8 @@ public class Throwing : MonoBehaviour
     private void Start()
     {
         readyToThrow = true;
+        audioSource = gameObject.AddComponent<AudioSource>();
+		audioSource.clip = throwingSound;
     }
 
     private void Update()
@@ -106,6 +110,8 @@ public class Throwing : MonoBehaviour
     private void Throw()
     {
         readyToThrow = false;
+
+        audioSource.Play();
 
         // instantiate object to throw
         GameObject projectile = Instantiate(throwableObject, attackPoint.position, cam.rotation);

@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2189177328679558532}
   - component: {fileID: 1467504962016980501}
   - component: {fileID: 8746976982648668666}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Explosive Ball
-  m_TagString: Untagged
+  m_TagString: ExplosiveBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
