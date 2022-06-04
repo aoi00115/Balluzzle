@@ -6,8 +6,6 @@ public class Button : Interactable
 {
     [SerializeField]
     private GameObject gate;
-    [SerializeField]
-    private GameObject button;
     private bool gateOpen;
 
     // Start is called before the first frame update
@@ -26,6 +24,5 @@ public class Button : Interactable
     {
         gateOpen = !gateOpen;
         gate.GetComponent<Animator>().SetBool("isOpen", gateOpen);
-        button.GetComponent<Animator>().SetTrigger("push");
     }
 }

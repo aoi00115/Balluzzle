@@ -11,6 +11,7 @@ TagManager:
   - GrapplingBall
   - BallisticBall
   - TeleportationBall
+  - Goal
   layers:
   - Default
   - TransparentFX
