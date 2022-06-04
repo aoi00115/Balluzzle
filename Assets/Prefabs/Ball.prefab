@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1979988074184540885}
   - component: {fileID: 1244768640963326276}
   - component: {fileID: -254364594015445333}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -112,5 +112,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.49999994
   m_Center: {x: 0, y: 0, z: 0}

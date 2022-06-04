@@ -206,7 +206,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1115139829}
+      - m_Target: {fileID: 1115139831}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: SinglePlayerButton
         m_Mode: 1
@@ -668,7 +668,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1115139830}
-  - component: {fileID: 1115139829}
+  - component: {fileID: 1115139831}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -676,18 +676,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1115139829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1115139828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48ed198bd68e64246a84d6e8fffedc6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1115139830
 Transform:
   m_ObjectHideFlags: 0
@@ -703,6 +691,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1115139831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115139828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48ed198bd68e64246a84d6e8fffedc6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballCountText: {fileID: 0}
+  explosiveBallCountText: {fileID: 0}
+  antiGravityBallCountText: {fileID: 0}
+  ballisticBallCountText: {fileID: 0}
+  grapplingBallCountText: {fileID: 0}
+  teleportationBallCountText: {fileID: 0}
+  throwScript: {fileID: 0}
 --- !u!1 &1680980912
 GameObject:
   m_ObjectHideFlags: 0

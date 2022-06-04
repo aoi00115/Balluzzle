@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PickUpScript : MonoBehaviour
 {
-    public LayerMask pickUpLayer;
     public Transform playerCam;
     public Throwing throwScript;
     public RaycastHit hitInfo;
@@ -24,12 +23,40 @@ public class PickUpScript : MonoBehaviour
         if(Input.GetKeyDown(pickUpKey))
         {
             Ray pickUpRay = new Ray(playerCam.transform.position, playerCam.transform.forward);
-            if(Physics.Raycast(pickUpRay, out hitInfo, pickUpRange, pickUpLayer))
+            if(Physics.Raycast(pickUpRay, out hitInfo, pickUpRange))
             {
-                PickUp();
-                Destroy(hitInfo.transform.gameObject);
+                if(hitInfo.collider.tag == "Ball")
+                {
+                    PickUp();
+                    Destroy(hitInfo.transform.gameObject);
+                }
+                if(hitInfo.collider.tag == "ExplosiveBall")
+                {
+                    PickUp();
+                    Destroy(hitInfo.transform.gameObject);
+                }
+                if(hitInfo.collider.tag == "AntiGravityBall")
+                {
+                    PickUp();
+                    Destroy(hitInfo.transform.gameObject);
+                }
+                if(hitInfo.collider.tag == "GrapplingBall")
+                {
+                    PickUp();
+                    Destroy(hitInfo.transform.gameObject);
+                }
+                if(hitInfo.collider.tag == "BallisticBall")
+                {
+                    PickUp();
+                    Destroy(hitInfo.transform.gameObject);
+                }
+                if(hitInfo.collider.tag == "TeleportationBall")
+                {
+                    PickUp();
+                    Destroy(hitInfo.transform.gameObject);
+                }
             }
-        }
+        } 
     }
 
     private void PickUp()

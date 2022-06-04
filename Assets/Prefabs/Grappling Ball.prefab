@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8802189507347907038}
   - component: {fileID: 8078246528483406415}
   - component: {fileID: 2100274668457352608}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Grappling Ball
   m_TagString: GrapplingBall
   m_Icon: {fileID: 0}

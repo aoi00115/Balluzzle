@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5041207233660084796}
   - component: {fileID: 2634433483388780402}
   - component: {fileID: 8317582065454158082}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Ballistic Ball
   m_TagString: BallisticBall
   m_Icon: {fileID: 0}

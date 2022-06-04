@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1227245854582677271}
   - component: {fileID: 8755012732899149273}
   - component: {fileID: 2147202249925247384}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Anti-Gravity Ball
   m_TagString: AntiGravityBall
   m_Icon: {fileID: 0}

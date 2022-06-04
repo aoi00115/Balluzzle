@@ -4,23 +4,24 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - AntiGravityBall
+  - PickUp
   - Ball
-  - BallisticBall
   - ExplosiveBall
-  - TeleportationBall
+  - AntiGravityBall
   - GrapplingBall
+  - BallisticBall
+  - TeleportationBall
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - pick
+  - whatIsPlayer
   - Water
   - UI
   - whatIsGround
-  - 
-  - 
-  - 
+  - whatIsExplosive
+  - whatIsTeleportation
+  - Interactable
   - 
   - 
   - 
