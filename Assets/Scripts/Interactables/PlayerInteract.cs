@@ -9,8 +9,10 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField]
     private float distance = 3.0f;
     [SerializeField]
-    private LayerMask mask;
+    private LayerMask mask, mask1;
     private PlayerUI playerUI;
+
+    [Header("Settings")]
     public KeyCode interactKey = KeyCode.F;
 
     // Start is called before the first frame update
@@ -27,6 +29,18 @@ public class PlayerInteract : MonoBehaviour
         Debug.DrawRay(ray.origin, ray.direction * distance);
         RaycastHit hitInfo;
         if(Physics.Raycast(ray, out hitInfo, distance, mask))
+        {
+            if(hitInfo.collider.GetComponent<Interactable>() != null)
+            {
+                Interactable interactable = hitInfo.collider.GetComponent<Interactable>();
+                playerUI.UpdateText("Press [" + interactKey.ToString() + "] to " + interactable.promptMessage);
+                if(Input.GetKeyDown(interactKey))
+                {
+                    interactable.BaseInteract();
+                }
+            }
+        }
+        if(Physics.Raycast(ray, out hitInfo, distance, mask1))
         {
             if(hitInfo.collider.GetComponent<Interactable>() != null)
             {

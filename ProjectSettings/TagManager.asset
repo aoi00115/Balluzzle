@@ -4,14 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - PickUp
+  - Shootable
   - Ball
+  - Goal
   - ExplosiveBall
   - AntiGravityBall
   - GrapplingBall
   - BallisticBall
   - TeleportationBall
-  - Goal
+  - Target
   layers:
   - Default
   - TransparentFX
@@ -19,14 +20,14 @@ TagManager:
   - whatIsPlayer
   - Water
   - UI
-  - whatIsGround
   - whatIsExplosive
   - whatIsTeleportation
+  - Lighting
+  - Ground
+  - Postprocessing
+  - whatIsGround
   - Interactable
-  - 
-  - 
-  - 
-  - 
+  - Barricade
   - 
   - 
   - 
@@ -46,6 +47,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Fire
+    uniqueID: 3804908061
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

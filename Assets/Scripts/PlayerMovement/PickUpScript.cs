@@ -7,20 +7,27 @@ public class PickUpScript : MonoBehaviour
     public Transform playerCam;
     public Throwing throwScript;
     public RaycastHit hitInfo;
+    public GameObject ballCountText;
+    public GameObject explosiveBallCountText;
+    public GameObject antiGravityBallCountText;
+    public GameObject grapplingBallCountText;
+    public GameObject ballisticBallCountText;
+    public GameObject teleportationBallCountText;
 
     [Header("Settings")]
     public float pickUpRange;
-    public KeyCode pickUpKey = KeyCode.F;
+    private PlayerInteract playerInteract;
 
     private void Awake()
     {
         throwScript = GameObject.Find("Player").GetComponent<Throwing>();
+        playerInteract = GameObject.Find("Player").GetComponent<PlayerInteract>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(pickUpKey))
+        if(Input.GetKeyDown(playerInteract.interactKey))
         {
             Ray pickUpRay = new Ray(playerCam.transform.position, playerCam.transform.forward);
             if(Physics.Raycast(pickUpRay, out hitInfo, pickUpRange))
@@ -29,31 +36,37 @@ public class PickUpScript : MonoBehaviour
                 {
                     PickUp();
                     Destroy(hitInfo.transform.gameObject);
+                    ballCountText.SetActive(true);
                 }
                 if(hitInfo.collider.tag == "ExplosiveBall")
                 {
                     PickUp();
                     Destroy(hitInfo.transform.gameObject);
+                    explosiveBallCountText.SetActive(true);
                 }
                 if(hitInfo.collider.tag == "AntiGravityBall")
                 {
                     PickUp();
                     Destroy(hitInfo.transform.gameObject);
+                    antiGravityBallCountText.SetActive(true);
                 }
                 if(hitInfo.collider.tag == "GrapplingBall")
                 {
                     PickUp();
                     Destroy(hitInfo.transform.gameObject);
+                    grapplingBallCountText.SetActive(true);
                 }
                 if(hitInfo.collider.tag == "BallisticBall")
                 {
                     PickUp();
                     Destroy(hitInfo.transform.gameObject);
+                    ballisticBallCountText.SetActive(true);
                 }
                 if(hitInfo.collider.tag == "TeleportationBall")
                 {
                     PickUp();
                     Destroy(hitInfo.transform.gameObject);
+                    teleportationBallCountText.SetActive(true);
                 }
             }
         } 

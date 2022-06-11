@@ -38,6 +38,11 @@ public class GameManager : MonoBehaviour
 
     public void SinglePlayerButton()
     {
-        SceneManager.LoadScene("InGame");
+        SceneManager.LoadScene("Stage1");
+    }
+
+    public void ExtraButton()
+    {
+        SceneManager.LoadScene("Hub");
     }
 }

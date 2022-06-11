@@ -233,12 +233,4 @@ public class PlayerMovementAdvanced : MonoBehaviour
     {
         return Vector3.ProjectOnPlane(moveDirection, slopeHit.normal).normalized;
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.CompareTag("Goal"))
-        {
-            SceneManager.LoadScene("GoalScreen");
-        }
-    }
 }

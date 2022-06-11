@@ -17,6 +17,7 @@ public class Explosion : MonoBehaviour
     public float explosionRadius;
     public float explosionForce;
     public int explosionDamage;
+    public GameObject explosionSound;
     public GameObject explosionEffect;
 
     private Rigidbody rb;
@@ -61,6 +62,7 @@ public class Explosion : MonoBehaviour
         if (isExplosive)
         {
             Explode();
+            Instantiate(explosionSound, gameObject.transform.position, Quaternion.identity);
             return;
         }
 
@@ -75,7 +77,9 @@ public class Explosion : MonoBehaviour
     {
         // spawn explosion effect (if assigned)
         if (explosionEffect != null)
+        {
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
+        }
 
         // find all the objects that are inside the explosion range
         Collider[] objectsInRange = Physics.OverlapSphere(transform.position, explosionRadius);
@@ -96,6 +100,7 @@ public class Explosion : MonoBehaviour
                 // check if object has a rigidbody
                 if (objectsInRange[i].GetComponent<Rigidbody>() != null)
                 {
+
                     // custom explosionForce
                     Vector3 objectPos = objectsInRange[i].transform.position;
 

@@ -29,53 +29,30 @@ public class BallSelection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if(throwScript.ballTotalThrows == 0)
         {
             ballCountText.SetActive(false);
-        }
-        else
-        {
-            ballCountText.SetActive(true);
         }
         if(throwScript.explosiveBallTotalThrows == 0)
         {
             explosiveBallCountText.SetActive(false);
         }
-        else
-        {
-            explosiveBallCountText.SetActive(true);
-        }
         if(throwScript.antiGravityBallTotalThrows == 0)
         {
             antiGravityBallCountText.SetActive(false);
-        }
-        else
-        {
-            antiGravityBallCountText.SetActive(true);
         }
         if(throwScript.grapplingBallTotalThrows == 0)
         {
             grapplingBallCountText.SetActive(false);
         }
-        else
-        {
-            grapplingBallCountText.SetActive(true);
-        }
         if(throwScript.ballisticBallTotalThrows == 0)
         {
             ballisticBallCountText.SetActive(false);
         }
-        else
-        {
-            ballisticBallCountText.SetActive(true);
-        }
         if(throwScript.teleportationBallTotalThrows == 0)
         {
             teleportationBallCountText.SetActive(false);
-        }
-        else
-        {
-            teleportationBallCountText.SetActive(true);
         }
 
         for(int i = 1; i <= 6; i++)
