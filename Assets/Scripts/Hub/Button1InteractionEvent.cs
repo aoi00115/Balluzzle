@@ -28,6 +28,7 @@ public class Button1InteractionEvent : Interactable
         Invoke(nameof(Reset), 0.2f);
         player.transform.position = new Vector3(0, 0.5f, 0);
         throwScript.ballTotalThrows = 0;
+        throwScript.explosiveBallTotalThrows = 0;
     }
 
     private void Reset()

@@ -12,7 +12,9 @@ public class TeleportTrigger : MonoBehaviour
     public bool stage2Clear;
     private GameObject player;
     private GameObject ballCountText;
+    private GameObject explosiveBallCountText;
     private Vector3 targetCollapseCoordinate;
+    private Vector3 targetBomberCoordinate;
     private Throwing throwScript;
     private TextMeshProUGUI objective;
 
@@ -22,8 +24,10 @@ public class TeleportTrigger : MonoBehaviour
         player = GameObject.Find("Player");
         throwScript = GameObject.Find("Player").GetComponent<Throwing>();
         ballCountText = GameObject.Find("BallCountText");
+        explosiveBallCountText = GameObject.Find("ExplosiveBallCountText");
         targetCollapseCoordinate = new Vector3(0, 1.5f, 131.5f);
-        objective = GameObject.Find("Objective").GetComponent<TextMeshProUGUI>();
+        targetBomberCoordinate = new Vector3(132f, 1.5f, -0.0176473856f);
+        objective = GameObject.Find("Objective").GetComponent<TextMeshProUGUI>();  //Ignore error in other scene than Stage2
     }
 
     // Update is called once per frame
@@ -42,6 +46,14 @@ public class TeleportTrigger : MonoBehaviour
                 throwScript.ballTotalThrows = 10;
                 ballCountText.SetActive(true);
                 player.transform.position = targetCollapseCoordinate;
+            }
+
+            if(targetBomber)
+            {
+                throwScript.explosiveBallTotalThrows = 0;
+                throwScript.explosiveBallTotalThrows = 10;
+                explosiveBallCountText.SetActive(true);
+                player.transform.position = targetBomberCoordinate;
             }
 
             if(stage2Clear)
