@@ -19,7 +19,7 @@ public class ButtonInteractionEvent : Interactable
 
     void Update()
     {
-        targetCollapseTargetClone = GameObject.Find("TargetCollpaseTarget(Clone)");
+        targetCollapseTargetClone = GameObject.Find("TargetCollapseTarget(Clone)");
         targetBomberTargetClone = GameObject.Find("TargetBomberTarget(Clone)");
     }
 
